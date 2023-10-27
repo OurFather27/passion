@@ -1,0 +1,28 @@
+.contact-body{
+	background-color: rgb(0, 0, 0, 1.0);
+}
+.contact-contnair{
+	width: 70%;
+	height: 350px;
+	margin: auto;
+	background-color: rgb(15 26 63);
+	 -webkit-box-shadow: 0px 0px 16px -8px black;
+    box-shadow: 0px 0px 30px -8px black;
+    margin-top: 5%;
+    transition: all 0.5s ease;
+}
+.contact-contnair h1{
+	color: white;
+	text-align: center;
+	font-size: 50px;
+	font-weight:bold;
+	font-family: inherit;
+	transition: all 0.5s ease;
+}
+.contact-contnair p{
+	color: white;
+	text-align: center;
+	margin: 6%;
+	font-size: 20px;
+	font-family: Arial, Helvetica, sans-serif;;
+}
