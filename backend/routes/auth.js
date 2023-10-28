@@ -1,8 +1,10 @@
 const router = require("express").Router();
 const User = require("../models/User");
+const ContactModel = require("../models/ContactModel");
+
 const bcrypt = require("bcrypt");
 
-//REGISTER
+//REGISTER 100% done
 router.post("/register", async (req, res) => {
   try {
     //generate new password
@@ -24,7 +26,7 @@ router.post("/register", async (req, res) => {
   }
 });
 
-//LOGIN
+//LOGIN 100% done
 router.post("/login", async (req, res) => {
   try {
     const user = await User.findOne({ email: req.body.email });
@@ -39,4 +41,22 @@ router.post("/login", async (req, res) => {
   }
 });
 
+
+// ContactModel router 100% done
+router.post("/contact", async(req, res) => {
+      try{
+    const NewContact = new ContactModel({
+      fristname: req.body.fristname,
+      lastname: req.body.lastname,
+      phone_number: req.body.phone_number,
+      email: req.body.email,
+    });
+
+    //save contactInfo and respond
+    const contactInfo = await NewContact.save();
+    res.status(200).json(contactInfo);
+  } catch (err) {
+    res.status(500).json(err)
+  }
+});
 module.exports = router;
