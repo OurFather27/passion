@@ -10,97 +10,172 @@
   --above-all-in-container: 10000;
 }
 
-.topbarLeft {
-  flex: 3;
-}
-
-.logo {
-  transition: all 0.2s;
-
-  align-items: center;
-  align-content: center;
-  color: white;
-  letter-spacing: 2px;
-  font-weight: 400;
-  margin: 0;
-  font-size: 38px;
-  padding-top: 10px;
-}
-
-.topbarCenter {
-  flex: 5;
-}
-
-
-.topbarRight {
-  flex: 7;
-  display: flex;
-}
-.topbarRight span{
-  margin: 30px;
-  font-family:   "Times New Roman", Times, serif;
-  color: white;
-
-
-}
-.topbarLink {
-  margin-right: 10px;
-  font-size: 20px;
-  cursor: pointer;
-  font-family: arial;
-}
-
-.topbarLink:hover{
-  color:lightgrey;
-}
-
-.topbarIcons {
-  display: flex;
-}
-
-.topbarIconItem {
-  margin-right: 15px;
-  cursor: pointer;
-  position: relative;
-}
-
-.topbarIconBadge {
-  width: 15px;
-  height: 15px;
-  background-color: red;
-  border-radius: 50%;
-  color: white;
-  position: absolute;
-  top: -5px;
-  right: -5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-}
-
-.topbarImg {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  object-fit: cover;
-  cursor: pointer;
-}
-.profileLink{
-  color: white;
-  margin:25px;
-}
-.contact span{
-  background-color:white;
+.NavLinks {
   padding: 3px;
   font-family:monospace;
   color:rgb(15 26 63);
-  margin: 3px;
-}
-.contact span:hover{
-  color:;
-  background-color: rgb(15 26 63);
-  font-smooth: auto;
-  transition: all 0.5s ease;
 }
 
+.logo{
+  font-size: 30px;
+}
+
+.menu-icon {
+  display: none;
+  color: white;
+
+}
+
+.nav-elements ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.nav-elements ul li:not(:last-child) {
+  margin-right: 40px;
+}
+
+.nav-elements ul a {
+
+  font-size: 19px;
+  text-align: center;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-elements ul a.active {
+  color: #574c4c;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-elements ul a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #574c4c;
+}
+
+@media only screen 
+and (min-device-width : 652px) 
+and (max-device-width : 1024px)
+{
+  .nav-elements ul li:not(:last-child) {
+    margin-right: 20px;
+
+  }
+  .logo{
+    margin-right: 0px;
+    color: red;
+  }
+}
+@media only screen 
+and (min-device-width : 749px) 
+
+{
+.nav-elements{
+  margin: auto;
+}
+}
+@media only screen 
+and (min-device-width : 650px) 
+and (max-device-width : 747px)
+{
+  .nav-elements ul li:not(:last-child) {
+    margin-right: 30px;
+
+  }
+.nav-elements ul a {
+
+  font-size: 15px;
+
+}
+}
+
+@media (max-width: 650px) {
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+  }
+
+  .nav-elements {
+    position: absolute;
+    right: 0;
+    top: 80px;
+    background-color:rgb(15 26 63);
+    width: 2px;
+    height: calc(100vh - 60px);
+    transition: all 0.3s ease-in;
+    overflow: visible;
+  }
+
+  .nav-elements.active {
+    width: 250px;
+    height: auto;
+  }
+
+  .nav-elements ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-elements ul li {
+    margin-right: unset;
+    margin-top: 22px;
+  }
+}
+
+
+/*@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+
+.topbarContainer{
+        background-color: #63c971;
+        width: 100%;
+    }
+.logo{
+  font-size: 20px;
+  margin: 0px;
+  padding-top: 10px;
+}
+.topbarRight span{
+  margin: 3px;
+}
+.topbarLink {
+  margin-right: 10px;
+  font-size: 10px;
+
+}
+}
+@media only screen 
+and (min-width : 321px) {
+}
+@media only screen 
+and (max-width : 320px) {
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+}*/
