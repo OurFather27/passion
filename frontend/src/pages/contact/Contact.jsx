@@ -1,5 +1,6 @@
 import Topbar from "../../components/topbar/Topbar"
 import Footer from "../../components/footer/Footer"
+import ContactFeedback from './ContactFeedback'
 import "./contact.css"
 import Helmet from 'react-helmet';
 
@@ -21,6 +22,7 @@ function Contact() {
             info@fortissociety.org
          </p>
          </div>
+         <ContactFeedback/>
        <div className="footer_height">
       </div>
      
