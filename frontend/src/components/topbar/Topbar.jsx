@@ -1,4 +1,5 @@
 import "./topbar.css";
+import "../../components/logout/logout.css"
 import { Link } from "react-router-dom";
 import { useContext , useState} from "react";
 import { AuthContext } from "../../context/AuthContext";
@@ -15,17 +16,17 @@ export default function Topbar() {
 
 
   return (
-    <nav className="topbarContainer">
-      <div className="logo">
+    <nav className="NavContainer">
+      <div className="">
         <Link to="/#" style={{ textDecoration: "none" }}>
-          <span className="logo">Church</span>
+          <span className="Navlogo">Church</span>
         </Link>
       </div>
-      <div className="menu-icon"onClick={handleShowNavbar}>
+      <div className="NavMenuIcon"onClick={handleShowNavbar}>
        <MdEmojiEmotions />
       </div>
 
-        <div className={`nav-elements  ${showNavbar && 'active'}`}>
+        <div className={`NavList_Elements  ${showNavbar && 'active'}`}>
         <div className="NavLinks">
 
         <ul>
