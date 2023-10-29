@@ -111,7 +111,7 @@ and (max-device-width : 747px)
     right: 0;
     top: 80px;
     background-color:rgb(15 26 63);
-    width: 2px;
+    width: 0px;
     height: calc(100vh - 60px);
     transition: all 0.3s ease-in;
     overflow: visible;
