@@ -1,4 +1,10 @@
 
 .footer_height{
   height: 400px;
+
+}
+.footer_continaer{
+  background-color: rgb(15 26 63);
+  width: 100%;
+  height: 150px;
 }
