@@ -23,7 +23,7 @@ export default function ContactFeedback() {
         phone_Number: phone_Number.current.value,
       }
       try {
-        await axios.post("http://localhost:8800/api/auth/contact", NewContact);
+        await axios.post("https://churchbackend.onrender.com/api/auth/contact", NewContact);
         alert('succss')
         window.location.reload();
       } catch (err) {
