@@ -12,19 +12,17 @@ const router = express.Router();
 const path = require("path");
 const cors = require("cors");
 const bodyparser = require('body-parser');
-const { MONGO_URL, port } = require("./.env");
+//const { MONGO_URL, port } = require("./.env");
 
 dotenv.config();
 
-mongoose.set("strictQuery", true);
-mongoose
-  .connect(MONGO_URL)
-  .then(() => {
-    console.log("connected Database");
-  })
-  .catch((e) => {
-    console.log(e);
-  });
+mongoose.connect(
+  process.env.MONGO_URL,
+  { useNewUrlParser: true, useUnifiedTopology: true },
+  () => {
+    console.log("Connected to MongoDB");
+  }
+);
 
 app.use("/images", express.static(path.join(__dirname, "public/images")));
 
