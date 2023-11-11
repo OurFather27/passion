@@ -4,8 +4,9 @@ import Profile from "./pages/profile/Profile";
 import Register from "./pages/register/Register";
 import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
-import Watch from "./pages/watch/Watch"
-
+import Watch from "./pages/watch/Watch";
+import Location from "./pages/location/Location"
+import Give from "./pages/give/Give"
 import {
   BrowserRouter as Router,
   Switch,
@@ -21,7 +22,7 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/">
-          {user ? <Home /> : <Login />}
+        <Home /> 
         </Route>
         <Route path="/login">
         {user ? <Redirect to="/" /> : <Login />}</Route>
@@ -38,7 +39,13 @@ function App() {
           <Contact />
         </Route>
         <Route path="/watch">
-          <Watch />
+            <Watch /> 
+        </Route>
+        <Route path="/location">
+         <Location /> 
+        </Route>
+        <Route path="/give">
+         < Give/> 
         </Route>
 
       </Switch>
