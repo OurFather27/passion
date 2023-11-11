@@ -4,6 +4,7 @@ import axios from "axios";
 import { format } from "timeago.js";
 import { AuthContext } from "../../context/AuthContext";
 import { Link } from "react-router-dom";
+import data from "./data";
 
 
 export default function Post({ post }) {

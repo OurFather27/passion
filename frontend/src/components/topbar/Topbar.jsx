@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useContext , useState} from "react";
 import { AuthContext } from "../../context/AuthContext";
 import Logout from "../../components/logout/Logout"
-import { MdEmojiEmotions } from "react-icons/md";
+import { MdMenu } from "react-icons/md";
 import { NavLink } from 'react-router-dom'
 
 export default function Topbar() {
@@ -19,11 +19,11 @@ export default function Topbar() {
     <nav className="NavContainer">
       <div className="">
         <Link to="/#" style={{ textDecoration: "none" }}>
-          <span className="Navlogo">Church</span>
+          <span className="Navlogo">Logo oo</span>
         </Link>
       </div>
       <div className="NavMenuIcon"onClick={handleShowNavbar}>
-       <MdEmojiEmotions />
+       <MdMenu />
       </div>
 
         <div className={`NavList_Elements  ${showNavbar && 'active'}`}>
@@ -37,7 +37,7 @@ export default function Topbar() {
           <NavLink to="/Minstry"style={{ textDecoration: "none" }}>Minstrey</NavLink>
           </li>
           <li>
-          <NavLink to="/Watch"style={{ textDecoration: "none" }}>Watch</NavLink>
+          <NavLink to="/Location"style={{ textDecoration: "none" }}>Location</NavLink>
           </li>
           <li>
           <NavLink to="/about"style={{ textDecoration: "none" }}>About</NavLink>
@@ -46,7 +46,7 @@ export default function Topbar() {
           <NavLink className="contact"to="/Contact"style={{ textDecoration: "none" }}>Contact</NavLink>
           </li>
           <li>
-          <NavLink className="contact"to="/Contact"style={{ textDecoration: "none" }}>Donate</NavLink>
+          <NavLink className="contact"to="/give"style={{ textDecoration: "none" }}>Give</NavLink>
           </li>
         <li>
           <Logout/>

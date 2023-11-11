@@ -1,6 +1,7 @@
 .NavContainer {
+/*  border: solid 1px red;*/
   height: 90px;
-  width: 100%;
+  width: auto;
   background-color:rgb(15 26 63);
   display: flex;
   align-items: center;
@@ -8,6 +9,7 @@
   top: 0;
   z-index: 999;
   --above-all-in-container: 10000;
+/*  box-shadow: 0px 1px  30px rgb(15 26 69);*/
 }
 
 .NavLinks {
@@ -27,6 +29,11 @@
   border-radius: 5px;
   color: rgb(15 26 63);
 }
+.NavList_Elements .contact:hover{
+  background-color: rgb(15 26 63);
+  color: white;
+  transition: all 0.5s ease-in;
+}
 
 .NavMenuIcon {
   display: none;
@@ -42,6 +49,7 @@
   align-items: center;
   justify-content: space-between;
   list-style-type: none;
+
 }
 
 .NavList_Elements ul li:not(:last-child) {
@@ -55,10 +63,32 @@
   font-weight: 400;
   text-decoration: none;
 }
+.NavList_Elements li{
+   /* color:;
+    position: relative;*/
+}
+/*.NavList_Elements ul a::after{
+      content: '';
+    height:2px;
+    width:0px;
+    background-color: lightgrey;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    transition: 0.3s ease;
+}*/
+.NavList_Elements ul a:hover::after{
+  width: 34px;
+}
 
 .NavList_Elements ul a.active {
+}
+.NavList_Elements ul a:hover{
   color: grey;
-  font-weight: 500;
+    transition: all 0.3s ease-in;
+    width: 20%;
+    border-bottom:solid 2px lightgrey;
+
 }
 
 /*.NavList_Elements ul a.active::after {
@@ -76,11 +106,15 @@
 and (min-device-width : 240px) 
 and (max-device-width : 719px)
 {
+  .NavContainer{
+    width:auto;
+  }
 
   .NavList_Elements ul a {
   font-size: 18px;
 }
 .NavMenuIcon {
+  font-size: 40px;
   display: block;
   cursor: pointer;
   position: absolute;
@@ -106,7 +140,7 @@ and (max-device-width : 719px)
 }
 .NavList_Elements.active {
   width: 250px;
-  height: 250px;
+  height: 300px;
 }
 
 .NavList_Elements ul {
@@ -131,27 +165,4 @@ and (orientation : portrait)
 .NavContainer{
 }
 }
-/*
-@media only screen 
-and (min-width : 321px) {
-}
-@media only screen 
-and (max-width : 320px) {
-}
 
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) {
-}
-
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : landscape) {
-}
-
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait) {
-}*/

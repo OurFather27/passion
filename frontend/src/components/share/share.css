@@ -98,3 +98,19 @@
   cursor: pointer;
   opacity: 0.7;
 }
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 768px) {
+.{
+  width: 100%;
+  background-color: green;
+  
+    }
+}
+@media only screen 
+and (min-device-width : 882px) 
+and (max-device-width : 1024px){
+.{
+  
+}
+}
