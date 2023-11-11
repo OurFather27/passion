@@ -50,6 +50,7 @@ router.post("/contact", async(req, res) => {
       lastname: req.body.lastname,
       phone_number: req.body.phone_number,
       email: req.body.email,
+      contact_desc: req.body.contact_desc,
     });
 
     //save contactInfo and respond

@@ -3,7 +3,6 @@ const contact = mongoose.Schema(
   {
     fristname: {
       type: String,
-      required: true,
     },
     lastname: {
       type: String,
@@ -15,6 +14,9 @@ const contact = mongoose.Schema(
     email: {
       type: String,
     },
+    contact_desc: {
+      type:String,
+    }
   },
   { timestamps: true }
 );

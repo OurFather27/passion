@@ -11,19 +11,21 @@ const postRoute = require("./routes/posts");
 const router = express.Router();
 const path = require("path");
 const cors = require("cors");
-
-
-const port = process.env.PORT || 8800;
+const bodyparser = require('body-parser');
+const { MONGO_URL, port } = require("./.env");
 
 dotenv.config();
 
-mongoose.connect(
-  process.env.MONGO_URL,
-  { useNewUrlParser: true, useUnifiedTopology: true },
-  () => {
-    console.log("Connected to MongoDB");
-  }
-);
+mongoose.set("strictQuery", true);
+mongoose
+  .connect(MONGO_URL)
+  .then(() => {
+    console.log("connected Database");
+  })
+  .catch((e) => {
+    console.log(e);
+  });
+
 app.use("/images", express.static(path.join(__dirname, "public/images")));
 
 //middleware
@@ -32,6 +34,8 @@ app.use(express.json());
 app.use(helmet());
 app.use(router);
 app.use(morgan("common"));
+app.use(bodyparser.json());
+
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -50,7 +54,7 @@ app.post("/api/upload", upload.single("file"), (req, res) => {
     console.error(error);
   }
 });
-app.get("/",(req,res)=>{
+app.get("/",(req, res)=>{
     res.json("church server start")
 })
 
