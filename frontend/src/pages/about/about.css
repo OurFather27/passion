@@ -1,5 +1,5 @@
 .container-about{
-	width:50%;
+	width:80%;
 	height: 300px;
 	background-color: white;
 	opacity: 60%;
@@ -9,9 +9,12 @@
 	color: rgb(15 26 63);
 	font-family: inherit;
 }
+.container-about h2{
+	animation: fadein 7s ;
+}
 .ourMission{
 	width:80%;
-	height: 300px;
+	height: auto;
 	background-color: rgb(15 26 63);
 	margin: auto;
 	margin-top: 7%;
@@ -22,10 +25,11 @@
 	color:white;
 	font-size: 50px;
 
+
 }
 .OUR-VALUES{
 	width:80%;
-	height: 300px;
+	height:auto;
 	background-color: white;
 	margin: auto;
 	margin-top: 7%;
@@ -35,4 +39,19 @@
 	text-align: center;
 	color:rgb(15 26 63);
 	font-size: 50px;
+}
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+.ourMission{
+	width: auto;
+	align-items: center;
+}
+.container-about{
+	width: auto;
+	margin: auto;
+}
+.OUR-VALUES{
+	width: auto;
+}
 }

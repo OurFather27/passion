@@ -7,7 +7,7 @@ function About() {
   return (
     <>
     <Topbar/>
-    <Helmet bodyAttributes={{style: "background-image : url('./7.jpeg')"}}/>
+    <Helmet bodyAttributes={{style: "background-image : url('./6.jpeg')"}}/>
       <div className="container-about">
             <h2 className="">ABOUT</h2>
         </div>

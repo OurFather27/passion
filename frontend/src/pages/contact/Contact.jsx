@@ -14,12 +14,12 @@ function Contact() {
       <br></br>      <br></br>      <br></br>
         <h1 className="">CONTACT</h1>
          <p>
-           <h4>Future Leaders Foundation</h4><br/>
-            909 Third Avenue, #986<br/>
+           <h4>Christ for the World</h4><br/>
+            998 new ray Avenue, #998<br/>
 
-            New York, NY  10150<br/>
+            Addis abeba, NY  328973<br/>
 
-            info@fortissociety.org
+            info@christFortheworld.org
          </p>
          </div>
          <ContactFeedback/>
